@@ -8,6 +8,15 @@ import networkx as nx
 from collections import deque
 
 def succs(h_poly):
+    """
+    h_poly: initial homotopy polynomial (dict of {exponent: coefficient})
+    or any input convertible to Poly within the sympy library e.g. sympy.Poly
+
+    Returns:
+        (successors, succs_list)
+        successors: list of sympy.Poly polynomials
+        succs_list: list of dictionaries ({exponent: coefficient})
+    """
 
     h_poly = Poly(h_poly, x)
     monoms = h_poly.monoms()
@@ -60,6 +69,17 @@ def edge_cost(homotopy_polynomial):
 
 
 def isInterleaved(chain1, chain2, N):
+    """
+    Inputs:
+        chain1 : list of dict
+        chain2 : list of dict
+        N : int or float (Number of nodes)
+
+    Outputs:
+        bool
+            Returns True if the chains are interleaved
+            otherwise returns False.
+    """
 
     for i in range(len(chain1) - 1):
 
@@ -94,6 +114,14 @@ def isInterleaved(chain1, chain2, N):
 
 
 def homotopy_polynomial(G):
+    """
+    G: a networkx graph
+
+    Returns:
+         (poly, dictinry)
+         poly: a sympy.Poly object representation of the homotopy polynomial of G
+         dictinry: a dictionary {exponent: coefficient} representation of the homotopy polynomial of G
+    """
     cycle_counts = {}
     for idx, component in enumerate(nx.connected_components(G), start=1):
         subG = G.subgraph(component)
@@ -113,6 +141,16 @@ def homotopy_polynomial(G):
     return poly, dictnry
 
 def create_chain(list_of_graphs, dictionary=True):
+    """
+    Inputs:
+        list_of_graphs : list of networkx graphs
+        dictionary : bool, default True
+            - If True, returns dictionary representation of the homotopy polynomial.
+            - If False, returns the polynomial object itself.
+
+    Outputs:
+        chain : list of dictionaries or sympy.Poly objects
+    """
     chain = []
     for i in range(len(list_of_graphs)):
         if dictionary:
