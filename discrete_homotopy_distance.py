@@ -70,12 +70,11 @@ def edge_cost(homotopy_polynomial):
 
 def isInterleaved(chain1, chain2, N):
     """
-    Inputs:
         chain1 : list of dict
         chain2 : list of dict
         N : int or float (Number of nodes)
 
-    Outputs:
+    Returns:
         bool
             Returns True if the chains are interleaved
             otherwise returns False.
@@ -142,13 +141,12 @@ def homotopy_polynomial(G):
 
 def create_chain(list_of_graphs, dictionary=True):
     """
-    Inputs:
         list_of_graphs : list of networkx graphs
         dictionary : bool, default True
             - If True, returns dictionary representation of the homotopy polynomial.
             - If False, returns the polynomial object itself.
 
-    Outputs:
+    Returns:
         chain : list of dictionaries or sympy.Poly objects
     """
     chain = []
@@ -194,5 +192,6 @@ def homotopy_polynomial_poset(N, succs_func):
                 if edge_cost(g) <= m + 1:  # Edge allowance check
                     A.append(g)
                     E.append((h, g))
+
 
     return V, E
