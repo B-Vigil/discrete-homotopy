@@ -44,11 +44,14 @@ This project provides a Python implementation of algorithms 1 and 2 described in
 
    graphs1 = random_edge_chain(5)
    graphs2 = random_edge_chain(5)
-
-   chain1 = dhd.create_chain(graphs1, dictionary=True)
-   chain2 = dhd.create_chain(graphs2, dictionary=True)
    ```
-3. **Check interleaving**: Determine if the chains are interleaved.
+   - **Create the chain of homotopy polynomials**.
+     ```python
+        chain1 = dhd.create_chain(graphs1, dictionary=True)
+        chain2 = dhd.create_chain(graphs2, dictionary=True)
+     ```
+   
+4. **Check interleaving**: Determine if the chains are interleaved.
 
    ```python
    print(dhd.isInterleaved(chain1, chain2, 5)
