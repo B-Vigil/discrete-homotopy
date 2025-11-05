@@ -12,6 +12,9 @@ This project provides a Python implementation of algorithms 1 and 2 described in
 1. **Construct the poset $\mathcal{H}(5)$**: Indicate the the number of nodes (here $N=5$) and the successor function to be used. A visualizatoin of the homotopy poset $\mathcal{H}(5)$ is provided below along with a representative for each equivalence class.
 
    ```python
+   import discrete_homotopy_distance as dhd
+   import random
+   
    _, E = dhd.homotopy_polynomial_poset(5, dhd.succs)
    print(E)
    ```
@@ -36,4 +39,15 @@ This project provides a Python implementation of algorithms 1 and 2 described in
     graph_list.append(G.copy())
 
     return graph_list
+
+   graphs1 = random_edge_chain(5)
+   graphs2 = random_edge_chain(5)
+
+   chain1 = dhd.create_chain(graphs1, dictionary=True)
+   chain2 = dhd.create_chain(graphs2, dictionary=True)
+   ```
+3. **Check interleaving**: Determine if the chains are interleaved.
+
+   ```python
+   print(dhd.isInterleaved(chain1, chain2, 5)
    ```
