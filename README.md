@@ -42,16 +42,18 @@ This project provides a Python implementation of algorithms 1 and 2 described in
 
      return graph_list
    ```
-   - **Construct chains of subgraphs and homotopy polynomials**.
+   - **Construct chains of subgraphs**.
      ```python
         graphs1 = random_edge_chain(5)
         graphs2 = random_edge_chain(5)
-
+     ```
+   - **Construct chains of homotopy polynomials**
+     ```python
         chain1 = dhd.create_chain(graphs1, dictionary=True)
         chain2 = dhd.create_chain(graphs2, dictionary=True)
-   ```
+      ```
    
-4. **Check interleaving**: Determine if the chains are interleaved.
+3. **Check interleaving**: Determine if the chains are interleaved.
 
    ```python
    print(dhd.isInterleaved(chain1, chain2, 5)
