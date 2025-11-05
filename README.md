@@ -41,9 +41,11 @@ This project provides a Python implementation of algorithms 1 and 2 described in
      graph_list.append(G.copy())
 
      return graph_list
-
-   graphs1 = random_edge_chain(5)
-   graphs2 = random_edge_chain(5)
+   ```
+   - **Construct chains of subgraphs**.
+     ```python
+        graphs1 = random_edge_chain(5)
+        graphs2 = random_edge_chain(5)
    ```
    - **Create the chain of homotopy polynomials**.
      ```python
