@@ -18,7 +18,7 @@ This project provides a Python implementation of algorithms 1 and 2 described in
    _, E = dhd.homotopy_polynomial_poset(5, dhd.succs)
    print(E)
    ```
-![Example Poset](H5_poset.png "Example Poset")
+![Example Poset](H5.png "Example Poset")
 
 2. **Construct chains in $\mathcal{H}(5)$**: Define a helper function to construct two random chains in $\mathcal{H}(5)$.
 
