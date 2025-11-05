@@ -31,14 +31,14 @@ This project provides a Python implementation of algorithms 1 and 2 described in
      G.add_nodes_from(range(N))
      graph_list = [G.copy()]
 
-    all_edges = [(i,j) for i in range(N) for j in range(i+1, N)]
-    random.shuffle(all_edges)
+     all_edges = [(i,j) for i in range(N) for j in range(i+1, N)]
+     random.shuffle(all_edges)
 
-    for edge in all_edges:
-    G.add_edge(*edge)
-    graph_list.append(G.copy())
+     for edge in all_edges:
+     G.add_edge(*edge)
+     graph_list.append(G.copy())
 
-    return graph_list
+     return graph_list
 
    graphs1 = random_edge_chain(5)
    graphs2 = random_edge_chain(5)
