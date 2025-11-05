@@ -170,7 +170,7 @@ def evaluate_at(poly, x):
 
 def homotopy_polynomial_poset(N, succs_func):
     """
-    N: initial homotopy polynomial (dict of {exponent: coefficient})
+    N: number of nodes
     succs_func: function that takes a polynomial (dict) and returns a list of successors (list of dicts)
 
     Returns:
@@ -195,3 +195,4 @@ def homotopy_polynomial_poset(N, succs_func):
 
 
     return V, E
+
