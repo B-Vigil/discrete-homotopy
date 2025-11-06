@@ -37,8 +37,8 @@ This project provides a Python implementation of algorithms 1 and 2 described in
      random.shuffle(all_edges)
 
      for edge in all_edges:
-     G.add_edge(*edge)
-     graph_list.append(G.copy())
+        G.add_edge(*edge)
+        graph_list.append(G.copy())
 
      return graph_list
    ```
