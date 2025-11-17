@@ -58,3 +58,10 @@ This project provides a Python implementation of algorithms 1 and 2 described in
    ```python
    print(dhd.isInterleaved(chain1, chain2, 5)
    ```
+4. **Visualizing the poset**: Visualize the homotopy poset with specific chains (two at a time) highlighted.
+
+   ```python
+   dhd.poset_visualization(v, e, r_start=0.001, r_end=0.001, chain1=None, chain2=None)
+   ```
+
+   - If `chian1` and/or `chain2` is passed an argument, then `chain1` and/or `chain2` will be highlighted in the poset.
