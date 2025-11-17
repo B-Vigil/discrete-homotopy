@@ -65,3 +65,7 @@ This project provides a Python implementation of algorithms 1 and 2 described in
    ```
 
    - If `chian1` and/or `chain2` is passed an argument, then `chain1` and/or `chain2` will be highlighted in the poset.
+
+     ```python
+     dhd.poset_visualization(v, e, r_start=0.001, r_end=0.001, chain1=chain3, chain2=chain4)
+     ```
