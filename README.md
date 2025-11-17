@@ -69,3 +69,4 @@ This project provides a Python implementation of algorithms 1 and 2 described in
      ```python
      dhd.poset_visualization(v, e, r_start=0.001, r_end=0.001, chain1=chain3, chain2=chain4)
      ```
+   - **`r_start`** and **`r_end`** control how far the arrow begins and ends from the node centers.
