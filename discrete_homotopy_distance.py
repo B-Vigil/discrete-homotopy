@@ -518,23 +518,3 @@ def poset_visualization(V, E, r_start=0.42, r_end=0.42, chain1=None, chain2=None
     )
 
     fig.show()
-
-
-V, E = homotopy_polynomial_poset(5, succs)
-
-#print(E)
-print('Homotopy poset construction...Done')
-
-graphs1 = random_edge_chain(5)
-graphs2 = random_edge_chain(5)
-
-#chain1 = [{0: 6}, {0: 5}, {0: 4}, {0: 3}, {0: 2}, {0: 1}, {1: 1}, {2: 1}, {3: 1}, {4: 1}, {5: 1}, {6: 1}, {7: 1}, {8: 1}, {9: 1}, {10: 1}]#create_chain(graphs1, dictionary=True)
-#chain2 = [{0: 6}, {0: 5}, {0: 4}, {0: 3}, {1: 1, 0: 2}, {2: 1, 0: 2}, {2: 1, 0: 1}, {2: 1}, {3: 1}, {4: 1}, {5: 1}, {6: 1}, {7: 1}, {8: 1}, {9: 1}, {10: 1}]#create_chain(graphs2, dictionary=True)
-
-chain1 = create_chain(graphs1, dictionary=True)
-chain2 = create_chain(graphs2, dictionary=True)
-#print(chain1==chain2)
-
-poset_visualization(V, E, r_start=0.42, r_end=0.42, chain1=chain1, chain2=chain2)
-
-print(isInterleaved(chain1, chain2, 5))
